@@ -1,0 +1,50 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:rgba(128, 136, 158, .1);
+
+
+.advisory-page {
+
+	.facts-tile {
+		margin:30px 0;
+		padding:0 15px;
+		text-align: left;
+		border-left:6px solid $light-gray;
+	}
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+	.advisory-page {
+
+		.facts-tile {
+			
+		}
+	}
+}
+
+
+		
+
+@media screen and (max-width: 767px){
+	
+	.advisory-page {
+
+		.facts-tile {
+			
+		}
+	}	
+}
+

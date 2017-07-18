@@ -1,0 +1,136 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:rgba(128, 136, 158, .1);
+
+
+.companies-page {
+	padding-top:20px;
+
+	.co-background-gradient {
+		opacity:.5;
+		position: absolute;
+		top:0;
+		left:0;
+		margin:0;
+		width:100%;
+		height:100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+13,000000+13,000000+100&1+13,0+100 */
+		background: -moz-linear-gradient(top, rgba(0,0,0,1) 13%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,1) 13%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,1) 13%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+
+	.hero-header {
+		width:100%;
+		text-align: center;
+
+		img {
+			width:33%;
+			min-width:320px;
+			height:auto;
+			margin-bottom:25px;
+		}
+
+		h2 {
+			text-align: center;
+			width:100%;
+			color:white;
+			text-transform: none;
+			font-size:16px;
+			font-weight:400px;
+			letter-spacing:1px;
+		}
+	}
+
+	.tile-area {
+		position: relative;
+		z-index:100;
+		width:100%;
+		margin-top:70px;
+		height:auto;
+		overflow: hidden;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+	}
+
+	.link-tile {
+		width:48%;
+		background:white;
+		padding:25px 35px;
+		font-size:12px;
+	}
+
+	.tile-logo {
+		min-height:50px;
+		margin-bottom:5px;
+		position: relative;
+	}
+
+	.cityscape {
+		position: fixed;
+		bottom:41px;
+		left:0;
+		width:96%;
+		height:auto;
+		right:0;
+		margin:0 auto;
+		overflow:hidden;
+		opacity:0;
+
+		.gray-city {
+			position: absolute;
+			bottom:0;
+			left:0;
+			width:100%;	
+			opacity:0;
+		}
+
+		.green-city {
+			position: relative;
+			width:100%;
+			height:auto;
+			opacity:0;
+		}
+	}
+
+	.ground {
+		position: fixed;
+		left:0;
+		bottom:0;
+		height:60px;
+		width:100%;
+		background-color:#f2f3f5;
+	}
+}
+				
+
+@media screen and (max-width: 767px){
+
+	.companies-page {
+    padding-bottom: 100px;
+
+    .hero-header {
+		
+			img {
+				width:90%;
+				min-width:90%;
+			}
+		}
+
+    .link-tile {
+			width:100%;
+			margin-bottom: 50px;
+		}
+	}
+}

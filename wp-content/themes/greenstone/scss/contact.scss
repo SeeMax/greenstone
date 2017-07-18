@@ -1,0 +1,180 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:rgba(128, 136, 158, .1);
+
+
+.contact-page {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: flex;
+	flex-wrap:no-wrap;
+	align-items:center;
+	z-index: -1;
+	color:white;
+
+	.content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-header {
+		opacity:0;
+	}
+
+	h2 {
+		color:white;
+	}
+
+	hr {
+		border-color:white;
+	}
+}
+
+.left-back {
+	overflow:hidden;
+	background: $dark-green;
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:50%;
+	height:0%;
+	display: flex;
+	justify-content:flex-end;
+}
+				
+.right-back {
+	overflow:hidden;
+	background: $dark-green;
+	position: absolute;
+	top:0;
+	right:0;
+	width:50%;
+	height:0%;
+	display: flex;
+}
+
+.contact-content {
+	width:48%;
+	margin:0 1%;
+	display: flex;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:center;
+	padding:50px;
+	background:white;
+	color:$dark-green;
+	font-size: 16px;
+	text-transform: uppercase;
+  line-height: 1.3;
+  opacity:0;
+
+	a {
+		color:$dark-green;
+	}
+
+	h3 {
+		width:100%;
+		margin-bottom:5px;
+		text-align: center;
+	}
+
+	.contact-icon {
+		width:20%;
+		margin-bottom:25px;
+	}
+}
+
+.contact-close {
+	position: absolute;
+  top: 100px;
+  right: 60px;
+  z-index: 1;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  cursor:pointer;
+  transform:translateY(-200px);
+  opacity:0;
+}
+
+.left-content {
+	transform:translateY(200px);
+
+	span {
+		padding-top:25px;
+		font-weight: 700;
+		 
+		 a {
+		 	font-weight: 400;
+		 }
+	}
+}
+
+ .right-content {
+ 		transform:translateY(-200px);
+
+	.button {
+		transform:translateY(-30px);
+  	opacity:0;
+	}
+
+	.button-guts {
+
+		a {
+			padding:16px 20px 14px 20px;
+			color:white;
+
+			&:hover {
+				color:white;
+			}
+		}
+
+		// img {
+	 //    margin-left: 15px;
+	 //    margin-top: -1px;
+	 //    width: 30px;
+	 //    transition: margin 0.3s;
+	 //  }
+	}
+}
+				
+
+@media screen and (max-width: 767px){
+
+	.contact-page {
+		overflow:scroll;
+		padding-top:30px;
+		align-items:flex-start;
+	}
+
+	.contact-content {
+		width:100%;
+		max-width:100%;
+		margin-bottom:30px;
+	}
+
+	.contact-close {
+	  top: 2%;
+	  right: 7%;
+	  z-index: 10;
+	  font-size: 30px;
+	}
+	
+
+
+	.left-back, .right-back {
+		width:100%;
+	}
+}

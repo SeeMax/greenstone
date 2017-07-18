@@ -1,0 +1,29 @@
+.investment-page {
+
+	.grid-item {
+		width:31%;
+	}
+	
+}
+
+
+.global-map {
+	width:100%;
+	height:auto;
+
+	svg {
+		width:100%;
+		height:auto;
+	}
+}
+
+@media screen and (max-width: 767px){
+	
+	.investment-page {
+
+		.grid-item {
+			width:48%;
+		}
+		
+	}
+}

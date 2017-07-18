@@ -1,0 +1,168 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:#80889e;
+
+.back-black {
+	background:$black;	
+}
+
+.back-white {
+	background:$white;	
+}
+
+.back-light-gray {
+	background:$light-gray;	
+}
+
+.back-med-gray {
+	background:$med-gray;	
+}
+
+.back-dark-gray {
+	background:$dark-gray;	
+}
+
+
+.back-light-green {
+	background:$light-green;	
+}
+
+.back-med-green {
+	background:$med-green;	
+}
+
+.back-dark-green {
+	background:$dark-green;	
+}
+
+.text-dark-gray {
+	color:$dark-gray;
+}
+
+
+.width10 {
+	width:10%;
+	height:auto;
+}
+
+.width14 {
+	width:14.28%;
+	height:auto;
+}
+
+.width20 {
+	width:20%;
+	height:auto;
+}
+
+.width25 {
+	width:25%;
+	height:auto;
+}
+
+.width30 {
+	width:30%;
+	height:auto;
+}
+
+.width33 {
+	width:33.33333%;
+	height:auto;
+}
+
+.width40 {
+	width:40%;
+	height:auto;
+}
+
+.width50 {
+	width:50%;
+	height:auto;
+}
+
+.width60 {
+	width:60%;
+	height:auto;
+}
+
+.width66 {
+	width:66.666666%;
+	height:auto;
+}
+
+.width70 {
+	width:70%;
+	height:auto;
+}
+
+.width75 {
+	width:75%;
+	height:auto;
+}
+
+.width80 {
+	width:80%;
+	height:auto;
+}
+
+.width90 {
+	width:90%;
+	height:auto;
+}
+
+.width100 {
+	width:100%;
+	height:auto;
+}
+
+.flex-between {
+	width:100%;
+	height:auto;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.zeroOp {
+	opacity:0;
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+	.width10, .width20, .width25, .width30, .width33, .width40, .width50, .width60, .width66, .width70, .width75, .width80, .width90, .width100 {
+		width:100%;
+	}
+
+	.width14 {
+		width:25%;
+	}
+
+	.first-50-w {
+		padding-right:0%;
+	}
+}
+
+@media screen and (max-width: 767px){
+
+	footer {
+
+		.width10, .width20, .width25, .width30, .width33, .width40, .width50, .width60, .width66, .width70, .width75, .width80, .width90, .width100 {
+			width:100%;
+		}		
+		
+		.first-50-w {
+			padding-right:0%;
+		}
+	}
+}

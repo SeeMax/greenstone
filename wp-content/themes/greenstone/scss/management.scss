@@ -1,0 +1,260 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:rgba(128, 136, 158, .1);
+
+.management-header {
+
+	.content {
+		align-items:center;
+	}
+
+	.header-logo {
+		width:26%;
+	}
+
+	.button {
+		margin:0;
+
+		a {
+			color:white;
+		}
+
+		.button-guts {
+			transition:all .3s;
+
+	    img {
+	    	transition:all .3s;
+	    }
+
+	    &:hover {
+	    	background:#0E775C;
+
+	    	img {
+	    		transform:translateX(3px);
+	    	}
+	    }
+		}
+	}
+}
+
+
+.management-page {
+
+	.property-overlay {
+
+		.property-headline {
+			font-size: 14px;
+			font-weight:600;
+			margin-bottom:10px;
+			margin-top: 5px;
+		}
+
+		.property-sqft {
+			font-size: 14px;
+			font-weight:600;
+			text-transform: none;
+			margin-bottom:10px;
+		}
+
+		.property-type {
+			margin-bottom:15px;
+
+			img  {
+				width:90%;
+				height:auto;
+			}
+		}
+	
+		.property-location {
+			font-size: 12px;
+			font-weight:400;
+			margin-bottom:10px;
+			text-transform: none;
+		}
+	}
+
+	.leased-holder {
+		width:80%;
+		height:auto;
+		margin:0 auto 15px auto;
+		display: none;
+	}
+
+
+	.leased {
+		position: relative;
+
+		.property-overlay {
+			display:flex;
+			align-items:center;
+			justify-content:center;
+
+			.inner {
+				background-color: rgba(0,0,0,.5);
+			}
+
+			.property-headline {
+				margin-bottom:80px;
+			}
+
+
+			.property-sqft {
+				display:none;
+			}
+
+			.property-type {
+				display:none;
+			}
+		}
+
+		.propertyImage {
+			filter: grayscale(100%);
+		}
+
+		.leased-holder {
+			position: absolute;
+			top:35%;
+			left:0;
+			right:0;
+			margin:0 auto;
+			display: block;
+			z-index:10;
+		}
+	}
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1023px){
+
+	.management-page {
+
+		.property-overlay {
+
+			.property-headline {
+				font-size: 16px;
+				margin-bottom:10px;
+				margin-top: 5px;
+			}
+
+			.property-sqft {
+				font-size: 16px;
+				margin-bottom:10px;
+			}
+
+			.property-type {
+				margin-bottom:15px;
+
+				img  {
+					width:90%;
+				}
+			}
+		
+			.property-location {
+				font-size: 16px;
+				margin-bottom:10px;
+			}
+		}
+
+		.leased-holder {
+			width:65%;
+			height:auto;
+			margin:0 auto 15px auto;
+			display: none;
+		}
+
+
+		.leased {
+
+			.property-overlay {
+
+				.property-headline {
+					margin-bottom:100px;
+				}
+			}
+		}
+	}
+}
+
+
+		
+
+@media screen and (max-width: 767px){
+	
+	.management-header {
+
+		.button {
+			display:none;
+		}
+
+		.header-logo {
+			width:65%;
+
+			img {
+				max-width:225px;
+			}
+		}
+	}
+
+	.management-page {
+
+		.property-overlay {
+
+			.property-headline {
+				font-size: 12px;
+				margin-bottom:5px;
+				margin-top: 5px;
+			}
+
+			.property-sqft {
+				font-size: 12px;
+				margin-bottom:5px;
+			}
+
+			.property-type {
+				margin-bottom:10px;
+
+				img  {
+					width:90%;
+				}
+			}
+		
+			.property-location {
+				font-size: 10px;
+				margin-bottom:10px;
+			}
+		}
+
+		.leased-holder {
+			width:65%;
+			height:auto;
+			margin:0 auto 15px auto;
+			display: none;
+		}
+
+
+		.leased {
+
+			.property-overlay {
+
+				.property-headline {
+					margin-bottom:40px;
+				}
+			}
+			.leased-holder {
+				top:40%;
+			}
+		}
+	}
+}
+

@@ -39,17 +39,17 @@ gulp.task('css', function() {
 
 
 gulp.task('watch', ['browserSync', 'sass', 'css', 'scripts'], function (){
-  gulp.watch('scss/*.scss', ['sass']); 
-  gulp.watch('style.css', ['css']); 
-  gulp.watch('*.php', browserSync.reload); 
-  gulp.watch('partials/*.php', browserSync.reload); 
-  gulp.watch('js/parts/*.js', ['scripts']); 
-  gulp.watch('js/*.js', browserSync.reload); 
+  gulp.watch('scss/*.scss', ['sass']);
+  gulp.watch('style.css', ['css']);
+  gulp.watch('*.php', browserSync.reload);
+  gulp.watch('partials/*.php', browserSync.reload);
+  gulp.watch('js/parts/*.js', ['scripts']);
+  gulp.watch('js/*.js', browserSync.reload);
 });
 
 gulp.task('noMamp', ['sass', 'css', 'scripts'], function (){
-  gulp.watch('scss/*.scss', ['sass']); 
-  gulp.watch('style.css', ['css']); 
-  gulp.watch('js/parts/*.js', ['scripts']); 
-  
+  gulp.watch('scss/*.scss', ['sass']);
+  gulp.watch('style.css', ['css']);
+  gulp.watch('js/parts/*.js', ['scripts']);
+
 });

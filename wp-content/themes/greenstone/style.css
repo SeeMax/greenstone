@@ -4,6 +4,7 @@
 *,
 *:after,
 *:before {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -47,11 +48,6 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0; }
-
-::-moz-selection {
-  background: yellow;
-  color: #000;
-  text-shadow: none; }
 
 ::selection {
   background: yellow;
@@ -202,10 +198,8 @@ section {
   height: auto; }
 
 .content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -290,7 +284,6 @@ hr {
   background: #139170;
   transition: background 0.5s; }
   .button-guts a {
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
@@ -411,7 +404,9 @@ hr {
     width: 100%;
     height: 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+13,000000+13,000000+100&1+13,0+100 */
+    background: -moz-linear-gradient(top, black 13%, transparent 100%);
     /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, black 13%, transparent 100%);
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, black 13%, transparent 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -440,12 +435,9 @@ hr {
     margin-top: 70px;
     height: auto;
     overflow: hidden;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .companies-page .link-tile {
     width: 48%;
     background: white;
@@ -500,12 +492,9 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-wrap: no-wrap;
+  align-items: center;
   z-index: -1;
   color: white; }
   .contact-page .content {
@@ -526,10 +515,8 @@ hr {
   left: 0;
   width: 50%;
   height: 0%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
+  justify-content: flex-end; }
 
 .right-back {
   overflow: hidden;
@@ -539,20 +526,15 @@ hr {
   right: 0;
   width: 50%;
   height: 0%;
-  display: -ms-flexbox;
   display: flex; }
 
 .contact-content {
   width: 48%;
   margin: 0 1%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 50px;
   background: white;
   color: #139170;
@@ -605,8 +587,7 @@ hr {
   .contact-page {
     overflow: scroll;
     padding-top: 30px;
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    align-items: flex-start; }
   .contact-content {
     width: 100%;
     max-width: 100%;
@@ -627,8 +608,7 @@ footer {
   footer .content {
     padding-top: 30px;
     padding-bottom: 30px;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    justify-content: space-between; }
   footer a {
     color: #414042; }
   footer #map {
@@ -663,12 +643,9 @@ footer {
   position: fixed;
   width: 55px;
   height: 55px;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background: white;
   bottom: 35px;
@@ -693,10 +670,8 @@ footer {
   margin-top: 18px; }
 
 #mc_embed_signup .button-guts {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   padding-right: 12px;
   transition: all .3s; }
   #mc_embed_signup .button-guts img {
@@ -731,8 +706,7 @@ footer {
       margin-bottom: 20px; }
     footer .copyright-footer .content {
       text-align: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      justify-content: center;
       line-height: 1.7em; }
     footer .copyright-footer span {
       display: block;
@@ -747,12 +721,9 @@ footer {
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   z-index: 997; }
   .header .content {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px; }
 
@@ -768,21 +739,16 @@ footer {
 
 .nav {
   width: 70%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  justify-content: center; }
   .nav a {
     color: #6d6e71;
     height: auto;
     text-decoration: none; }
   .nav ul {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1060px;
     padding: 0;
@@ -823,14 +789,10 @@ footer {
     .header section {
       padding-bottom: 0; }
     .header .content {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      -ms-flex-align: center;
-          align-items: center; }
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; }
   .mobile-menu {
     z-index: 999;
     display: block;
@@ -863,12 +825,9 @@ footer {
     .nav ul {
       margin: 94px 0 0 0;
       background: #ebebeb;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-align: start;
-          align-items: flex-start;
-      -ms-flex-line-pack: center;
-          align-content: center; }
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: center; }
     .nav li {
       font-size: 30px;
       width: 100%;
@@ -1009,7 +968,6 @@ video {
     display: inline-block;
     margin-top: 0; }
   .service-tile .button-guts {
-    display: -ms-flexbox;
     display: flex;
     text-transform: uppercase;
     color: white;
@@ -1034,8 +992,7 @@ video {
     fill-opacity: 0; }
 
 .significant-facts .content {
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   padding-top: 60px;
   padding-bottom: 20px; }
 
@@ -1065,8 +1022,7 @@ video {
     letter-spacing: 0px; }
 
 .global-reach .content {
-  -ms-flex-pack: center;
-      justify-content: center; }
+  justify-content: center; }
 
 .global-tile {
   position: relative;
@@ -1101,19 +1057,14 @@ video {
 
 .property-buttons {
   width: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   margin-bottom: 40px; }
   .property-buttons li {
     color: #a2a2a5;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: center;
-        justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     cursor: pointer;
     margin: 0 5%;
     text-transform: uppercase;
@@ -1131,21 +1082,15 @@ video {
 .logo-container {
   width: 100%;
   height: auto;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-content: center;
+  justify-content: space-around;
   margin: 20px 0 45px 0; }
 
 .sample-tile {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  align-items: center;
+  justify-content: center; }
   .sample-tile img {
     width: auto;
     height: 100%; }
@@ -1189,14 +1134,10 @@ video {
   .property-overlay .inner {
     cursor: default;
     position: relative;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
     opacity: 0;
     padding: 20px;
     text-transform: uppercase;
@@ -1282,8 +1223,7 @@ video {
   .property-buttons {
     width: 94%;
     margin: 0 auto 40px auto;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    justify-content: space-between; }
     .property-buttons li {
       margin: 0;
       font-size: 11px; } }
@@ -1316,8 +1256,7 @@ video {
     opacity: 0; }
 
 .management-header .content {
-  -ms-flex-align: center;
-      align-items: center; }
+  align-items: center; }
 
 .management-header .header-logo {
   width: 26%; }
@@ -1368,12 +1307,9 @@ video {
 .management-page .leased {
   position: relative; }
   .management-page .leased .property-overlay {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    align-items: center;
+    justify-content: center; }
     .management-page .leased .property-overlay .inner {
       background-color: rgba(0, 0, 0, 0.5); }
     .management-page .leased .property-overlay .property-headline {
@@ -1585,12 +1521,9 @@ video {
 .flex-between {
   width: 100%;
   height: auto;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .zeroOp {
   opacity: 0; }

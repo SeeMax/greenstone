@@ -1,0 +1,135 @@
+$black:#414042;
+$white:#f6f6f6;
+
+$light-green:#5EC0A1;
+$med-green:#39AD8E;
+$dark-green:#139170;
+
+$light-gray:#ebebeb;
+$med-gray:#a2a2a5;
+$dark-gray:#6d6e71;
+
+$blue-green:rgba(128, 136, 158, .1);
+
+
+.team-page {
+  overflow:hidden;
+
+  .section-header {
+    margin-bottom:70px;
+
+    h2 {
+      color:$dark-gray;
+    }
+  }
+}
+
+.team-tiles {
+
+  .content {
+    overflow: hidden;
+  }
+}
+
+.single-bio {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  opacity:0;
+  position: relative;
+  padding:40px 50px 70px 50px;
+	background: $white;
+
+// Every 4 statrting at 3
+// Every 4 statrting at 4
+	// &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(11), &:nth-of-type(12),&:nth-of-type(15), &:nth-of-type(16){
+	// 	background:$light-gray;
+	// }
+
+  &:nth-of-type(4n+3), &:nth-of-type(4n+4) {
+    background: $light-gray;
+  }
+
+  .large-bio-link {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10;
+  }
+
+  .bio-content {
+    width:100%;
+    height:auto;
+  }
+
+  .border-svg {
+
+  }
+
+  .bio-image {
+    overflow:hidden;
+    position: relative;
+    height:auto;
+    width:50%;
+    margin-bottom:25px;
+    background:$med-green;
+    float:left;
+    margin:0 20px 10px 0;
+
+    svg {
+      transform:rotate(45deg);
+      position: absolute;
+      top:-40%;
+      left:-40%;
+      width:180%;
+      height:180%;
+    }
+  }
+
+  h4, h3 {
+    color:$dark-green;
+    font-weight: 400;
+    font-size:24px;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size:20px;
+    font-weight: 100;
+    margin-bottom:20px;
+    color:$dark-gray;
+  }
+
+  p {
+
+  }
+
+  .button {
+    margin-top: 40px;
+
+     .button-guts {
+       a {
+         text-transform: none;
+       }
+     }
+  }
+}
+
+
+@media screen and (max-width: 767px){
+
+  .single-bio {
+    padding:40px 25px 60px 25px;;
+
+
+    &:nth-of-type(4n+3), &:nth-of-type(4n+4) {
+      background: $white;
+    }
+
+    &:nth-of-type(odd) {
+      background: $light-gray;
+    }
+  }
+}

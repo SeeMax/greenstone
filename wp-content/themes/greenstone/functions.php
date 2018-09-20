@@ -100,7 +100,7 @@ function greenstone_theme_header_scripts()
 
         wp_register_script('slickslider', get_template_directory_uri() . '/js/lib/slick.js', array('jquery'), '2.7.1'); // Modernizr
         wp_enqueue_script('slickslider'); // Enqueue it!
-        
+
         wp_register_script('tweenmax', get_template_directory_uri() . '/js/lib/TweenMax.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('tweenmax'); // Enqueue it!
 
@@ -124,9 +124,9 @@ function greenstone_theme_header_scripts()
 
         wp_register_script('imagesLoaded', get_template_directory_uri() . '/js/lib/imagesLoaded.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('imagesLoaded'); // Enqueue it!
-        
-        wp_register_script( 'mapBox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js', array(), '2.7.1'); 
-        wp_enqueue_script('mapBox'); 
+
+        wp_register_script( 'mapBox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js', array(), '2.7.1');
+        wp_enqueue_script('mapBox');
 
         wp_register_script('momentumScroll', get_template_directory_uri() . '/js/lib/momentum.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('momentumScroll'); // Enqueue it!
@@ -166,8 +166,8 @@ function greenstone_theme_styles()
 
     // GOOGLE FONTS
     wp_enqueue_style( 'wpb-google-fonts-one', "https://fonts.googleapis.com/css?family=Open+Sans:400,700", false );
-    wp_enqueue_style( 'wpb-google-fonts-two', "https://fonts.googleapis.com/css?family=Rokkitt:400,700", false ); 
-    
+    wp_enqueue_style( 'wpb-google-fonts-two', "https://fonts.googleapis.com/css?family=Rokkitt:400,700", false );
+
     // FONTS CSS
     wp_register_style('greenstoneFonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0', 'all');
     wp_enqueue_style('greenstoneFonts'); // Enqueue it!
@@ -180,8 +180,8 @@ function greenstone_theme_styles()
     wp_register_style('SlickTheme', get_template_directory_uri() . '/css/slick-theme.css', array(), '1.0', 'all');
     wp_enqueue_style('SlickTheme'); // Enqueue it!
 
-    wp_enqueue_style( 'mapBox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css', false ); 
-    
+    wp_enqueue_style( 'mapBox', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css', false );
+
     // STYLE CSS
     wp_register_style('greenstone_theme', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('greenstone_theme'); // Enqueue it!
@@ -458,6 +458,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // ADD CUSTOM POST TYPES
 add_action('init', 'create_post_type_property'); // Add Properties
 add_action('init', 'create_post_type_managed'); // Add Managed Properties
+add_action('init', 'create_post_type_bios'); // Add Bios Properties
 
 
 // ADD CUSTOM NAV CLASS
@@ -519,7 +520,26 @@ function create_post_type_managed()
     );
 }
 
-function custom_active_item_classes($classes = array(), $menu_item = false){            
+function create_post_type_bios()
+{
+  register_taxonomy_for_object_type('category', 'greenstone_theme'); // Register Taxonomies for Category
+  register_taxonomy_for_object_type('post_tag', 'greenstone_theme');
+    register_post_type( 'bios',
+        array(
+            'labels' => array(
+                'name' => ('Bios'),
+                'singular_name' => ('Bio')
+            ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'bio'),
+        'supports' => array('title','editor'),
+        'menu_icon'   => 'dashicons-groups'
+        )
+    );
+}
+
+function custom_active_item_classes($classes = array(), $menu_item = false){
     global $post;
     $classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item active' : '';
     return $classes;
@@ -537,6 +557,9 @@ function custom_enter_title( $input ) {
 
     if( is_admin() && 'Enter title here' == $input && 'managed' == $post_type )
         return 'Enter The Managed Property Name';
+
+    if( is_admin() && 'Enter title here' == $input && 'bios' == $post_type )
+        return 'Enter The Team Members Name';
 
     return $input;
 }

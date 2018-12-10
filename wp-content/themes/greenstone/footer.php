@@ -24,7 +24,7 @@
 							<ul>
 								<li>CONTACT US</li>
 								<li>Greenstone Partners</li>
-								<li><a href="tel:<?php the_field('contact_phone_number', $pageTwoID); ?>"><?php the_field('contact_phone_number', $pageTwoID); ?></a></li> 
+								<li><a href="tel:<?php the_field('contact_phone_number', $pageTwoID); ?>"><?php the_field('contact_phone_number', $pageTwoID); ?></a></li>
 								<li><a href="mailto:<?php the_field('contact_email', $pageTwoID); ?>?subject=Website Inquiry"><?php the_field('contact_email', $pageTwoID); ?></a></li>
 							</ul>
 						</div>
@@ -37,7 +37,7 @@
 									<div id="mc_embed_signup">
 										<form action="//Greenstonepartners.us11.list-manage.com/subscribe/post?u=29faaeb2cbab86dc6bb355d2a&amp;id=bbc9e7a969" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 										  <div id="mc_embed_signup_scroll">
-											
+
 												<div class="mc-field-group">
 													<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
 												</div>
@@ -75,27 +75,16 @@
 				</div>
 				<?php endwhile; ?>
 			</footer>
-			<!-- /wrapper -->			
+			<!-- /wrapper -->
 		</div>
 
 
-			<?php get_template_part( 'partials/_contact-page' ); ?> 
+			<?php get_template_part( 'partials/_contact-page' ); ?>
 			<!-- /footer -->
 
-		
+
 
 
 		<?php wp_footer(); ?>
-
-		<!-- analytics -->
-		<script>
-		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
-		</script>
-
 	</body>
 </html>
